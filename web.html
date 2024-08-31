@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiVerify</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F7FA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #website-info {
+            margin-left: 5%;
+        }
+
+        #website-name {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        #tagline {
+            font-size: 16px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        nav {
+            margin-right: 5%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6C63FF;
+        }
+
+        #hero {
+            background-image: url('https://img.freepik.com/premium-photo/glowing-social-media-icons-night-panoramic-city-view-bangkok-southeast-asia-concept-networking-establishing-new-connections-people-businesses-double-exposure_269648-7273.jpg'); /* Use the image you uploaded */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 80px; /* Adjusted for fixed header */
+        }
+
+        #hero-content {
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #hero-content .role-buttons {
+            margin-top: 20px;
+        }
+
+        #hero-content .role-buttons button {
+            background-color: #6C63FF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #hero-content .role-buttons button:hover {
+            background-color: #5348E2;
+            transform: translateY(-3px);
+        }
+
+        #about-us {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 30px;
+            text-align: left;
+            color: #333;
+        }
+
+        #about-us h2 {
+            color: #6C63FF;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        #about-us p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            #hero {
+                height: 50vh;
+            }
+
+            #hero-content h1 {
+                font-size: 28px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        #footer {
+            background-color: #f2eeee;
+            color: #fff;
+            padding: 40px 0;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            margin: 0 20px;
+        }
+        
+        .footer-section h2 {
+            color: #6C63FF;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .footer-section p,
+        .footer-section ul {
+            line-height: 1.8;
+            font-size: 14px;
+            color: #bbb;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #040404;
+        }
+        
+        .footer-bottom {
+            background-color: #222;
+            color: #bbb;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #444;
+        }
+        
+        .footer-bottom span {
+            color: #6C63FF;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <div id="website-info">
+        <div id="website-name">OptiVerify</div>
+        <div id="tagline">- Redefining Serviceability</div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <div id="hero-content">
+        <h1>We Love to Build OptiVerify</h1>
+        <div class="role-buttons">
+            <button onclick="redirectToSignup('merchant')">I'm a Merchant</button>
+            <button onclick="redirectToSignup('buyer')">I'm a Buyer</button>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>About OptiVerify</h2>
+            <p>
+                At OptiVerify, we redefine serviceability through optimal searches of pincodes and merchants.
+                Our platform empowers merchants to define the pincodes they serve, while providing buyers with
+                real-time verification of serviceability. With a focus on over 30K pincodes and millions of
+                merchants, our data structure ensures near-instantaneous verification, enhancing the retail
+                and logistics experience.
+            </p>
+        </div>
+
+        <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#footer">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@optiverify.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2024 OptiVerify | Designed by Innoventers
+    </div>
+</footer>
+
+
+<script>
+    function redirectToSignup(role) {
+        if (role === 'buyer') {
+            window.location.href = 'buyerlogin.html';
+        } else if (role === 'merchant') {
+            window.location.href = 'merchantlogin.html';
+        }
+    }
+</script>
+
+</body>
+</html>
