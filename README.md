@@ -20,7 +20,7 @@ OptiVerify is a comprehensive platform designed to optimize the verification of 
 ### About Us:
 - **Mission Statement:** OptiVerify is dedicated to redefining serviceability through optimal searches of pincodes and merchants. Our data structure ensures near-instantaneous verification for over 30,000 pincodes and millions of merchants.
 - **Data Driven:** Our platform leverages a Compressed Sparse Row (CSR) matrix data structure to manage and query serviceable areas efficiently, ensuring fast and reliable serviceability checks.
-
+https://cdn-web.gofrugal.com/images/ondc-images/works.png
 ## Technical Implementation
 
 ### Frontend:
